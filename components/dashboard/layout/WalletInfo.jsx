@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 const overview = [
@@ -17,6 +17,7 @@ const overview = [
 ];
 
 const WalletInfo = () => {
+  const [show, setShow] = useState(true);
   return (
     <div className="p-4 bg-secondary rounded-md ">
       {overview.map(({ name, amount, icon, toggle }, i) => (
@@ -25,7 +26,9 @@ const WalletInfo = () => {
             <img src={icon} alt="" />
             <div>
               <h2 className=" text-sm font-bold">{name}</h2>
-              <p className=" text-xs">{amount}</p>
+              <p className=" text-xs">
+                {!toggle ? amount : show && toggle ? amount : "$*****"}
+              </p>
             </div>
           </div>
           {toggle && (
@@ -33,6 +36,7 @@ const WalletInfo = () => {
               src="/eye.svg"
               alt=""
               className="btn btn-circle btn-xs hover:bg-secondary border-none"
+              onClick={() => setShow(!show)}
             />
           )}
         </div>

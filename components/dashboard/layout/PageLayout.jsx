@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import AppBar from "./AppBar";
 import NavbarLayout from "./NavbarLayout";
+import Meta from "../../Meta";
 
 const PageLayout = ({ children, name }) => {
   return (
     <>
+      <Meta title={name} />
       <div className="flex w-full h-screen font-nunito">
         <aside className="hidden bg-primary py-6 w-3/10 overflow-y-auto lg:block">
           <NavbarLayout page={name} />
