@@ -21,7 +21,10 @@ const WalletInfo = () => {
   return (
     <div className="p-4 bg-secondary rounded-md ">
       {overview.map(({ name, amount, icon, toggle }, i) => (
-        <div className="flex justify-between items-center border-b border-[#EAFBFF] pb-3 mb-3">
+        <div
+          key={i}
+          className="flex justify-between items-center border-b border-[#EAFBFF] pb-3 mb-3"
+        >
           <div className="flex gap-2 text-white items-center">
             <img src={icon} alt="" />
             <div>

@@ -28,20 +28,20 @@ const cards = [
 const WalletCards = () => {
   return (
     <div className="text-[#001B21]">
-      <div className="flex justify-between mb-3">
+      <div className="flex justify-between items-center mb-3">
         <h2 className="font-bold">Wallet ({cards.length})</h2>
         <Link href="#">
           <a className="text-xs text-[#017189]">View all wallets</a>
         </Link>
       </div>
-      <div className="flex gap-6">
+      <div className="flex gap-6 overflow-x-auto pb-2 lg:pb-0">
         {cards.map(({ name, currency, img, amount, color }, i) => (
           <div
             key={i}
-            className="p-4 rounded-lg w-full cursor-pointer"
+            className="p-4 rounded-lg md:w-full  cursor-pointer"
             style={{ backgroundColor: color }}
           >
-            <div className="flex justify-between items-center mb-6">
+            <div className="flex min-w-[200px] justify-between items-center mb-6">
               <div className="text-sm">
                 <h3 className="">{name}</h3>
                 <p className="">{currency}</p>

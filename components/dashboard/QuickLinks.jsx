@@ -49,10 +49,10 @@ const QuickLinks = () => {
         </p>
       </div>
 
-      <div className="flex gap-6">
+      <div className="grid grid-cols-3 gap-2 lg:flex lg:gap-6">
         {links.map(({ icon, title, link }, i) => (
           <Link href={link} key={i}>
-            <a className="flex flex-col gap-2 justify-center px-6 py-4 rounded-md border border-[#F1F5F9] text-center cursor-pointer">
+            <a className="flex flex-col gap-2 justify-center px-3 lg:px-6 py-4 rounded-md border border-[#F1F5F9] text-center cursor-pointer">
               <div className="flex justify-center">
                 <img src={icon} alt="" />
               </div>

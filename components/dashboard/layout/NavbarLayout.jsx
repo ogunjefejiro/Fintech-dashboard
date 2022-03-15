@@ -3,7 +3,7 @@ import Link from "next/link";
 import WalletInfo from "./WalletInfo";
 import ReferandEarn from "./ReferandEarn";
 
-const NavbarLayout = ({ page }) => {
+const NavbarLayout = ({ page, setMenuOpen }) => {
   const navLinks = [
     {
       name: "dashboard",
@@ -13,43 +13,52 @@ const NavbarLayout = ({ page }) => {
     },
     {
       name: "wallet",
-      path: "/wallet",
+      path: "/#",
       title: "Wallet",
       icon: "/wallet-icon.svg",
     },
     {
       name: "cards",
-      path: "/cards",
+      path: "/#",
       title: "Cards",
       icon: "/card.svg",
     },
     {
       name: "fx-center",
-      path: "/fx-center",
+      path: "/#",
       title: "FX Centre",
       icon: "/dollar-square.svg",
     },
     {
       name: "beneficiaries",
-      path: "/beneficiaries",
+      path: "/#",
       title: "Beneficiaries",
       icon: "/profile-2user.svg",
     },
     {
       name: "perks",
-      path: "/perks",
+      path: "/#",
       title: "Perks",
       icon: "/tag.svg",
     },
   ];
   return (
-    <div className=" h-full px-8">
+    <div className="bg-primary py-6 h-full px-8 overflow-y-auto">
       <div>
-        <Link href="/">
-          <a>
-            <img src="/logo-white.png" alt="logo" className="px-8" />
-          </a>
-        </Link>
+        <div className="flex justify-between lg:px-8">
+          <Link href="/">
+            <a>
+              <img src="/logo-white.png" alt="logo" className="" />
+            </a>
+          </Link>
+          <img
+            src="/close-white.svg"
+            alt="vasiti logo"
+            className="lg:hidden cursor-pointer"
+            onClick={() => setMenuOpen(false)}
+          />
+        </div>
+
         <div className="mt-4">
           <WalletInfo />
         </div>
