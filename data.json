@@ -1,0 +1,139 @@
+{
+  "active": [
+    {
+      "id": 1,
+      "name": "Personal account",
+      "currency": "USD",
+      "img": "/usa.svg",
+      "amount": "$10,250.00",
+      "color": "#FFF6E6",
+      "ledgerBal": "$2,000,000.50",
+      "blockedBal": "$0.00",
+      "totalInc": "$2,000,000.50",
+      "totalOut": "$5,000,000.50",
+      "activityLegend": [
+        {
+          "icon": "/status-up.svg",
+          "title": "Total transactions",
+          "amount": "$88,600.00"
+        },
+        {
+          "icon": "/received.svg",
+          "title": "Pay-In",
+          "amount": "$4,600.00"
+        },
+        {
+          "icon": "/send.svg",
+          "title": "Pay-Out",
+          "amount": "$72,600.00"
+        }
+      ],
+      "transactions": [],
+      "invoices": [],
+      "def": true,
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": "EUR wallet",
+      "currency": "EUR",
+      "img": "/europe.svg",
+      "amount": "€4000.53",
+      "color": "#FBF1F0",
+      "ledgerBal": "€1,500,020.50",
+      "blockedBal": "€0.00",
+      "totalInc": "€4,000,000.50",
+      "totalOut": "€4,500,000.50",
+      "activityLegend": [
+        {
+          "icon": "/status-up.svg",
+          "title": "Total transactions",
+          "amount": "€20,600.00"
+        },
+        {
+          "icon": "/received.svg",
+          "title": "Pay-In",
+          "amount": "€14,600.00"
+        },
+        {
+          "icon": "/send.svg",
+          "title": "Pay-Out",
+          "amount": "€62,600.00"
+        }
+      ],
+      "transactions": [],
+      "invoices": [],
+      "def": false,
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "name": "School fees",
+      "currency": "GBP",
+      "img": "/england.svg",
+      "amount": "£50.00",
+      "color": "#DDECEF",
+      "ledgerBal": "€2,000,000.50",
+      "blockedBal": "€0.00",
+      "totalInc": "€2,000,000.50",
+      "totalOut": "€5,000,000.50",
+      "activityLegend": [
+        {
+          "icon": "/status-up.svg",
+          "title": "Total transactions",
+          "amount": "$88,600.00"
+        },
+        {
+          "icon": "/received.svg",
+          "title": "Pay-In",
+          "amount": "$4,600.00"
+        },
+        {
+          "icon": "/send.svg",
+          "title": "Pay-Out",
+          "amount": "$72,600.00"
+        }
+      ],
+      "transactions": [],
+      "invoices": [],
+      "def": false,
+      "status": "active"
+    }
+  ],
+  "inactive": [
+    {
+      "id": 4,
+      "name": "Flexing account",
+      "currency": "USD",
+      "img": "/usa.svg",
+      "amount": "$2,250.00",
+      "color": "#FFF6E6",
+      "ledgerBal": "$500,000.50",
+      "blockedBal": "$0.00",
+      "totalInc": "$700,000.50",
+      "totalOut": "$400,000.50",
+      "activityLegend": [
+        {
+          "icon": "/status-up.svg",
+          "title": "Total transactions",
+          "amount": "$12,600.00"
+        },
+        {
+          "icon": "/received.svg",
+          "title": "Pay-In",
+          "amount": "$1,600.00"
+        },
+        {
+          "icon": "/send.svg",
+          "title": "Pay-Out",
+          "amount": "$7,600.00"
+        }
+      ],
+      "transactions": [],
+      "invoices": [],
+      "def": true,
+      "status": "inactive"
+    }
+  ],
+  "closed": []
+}

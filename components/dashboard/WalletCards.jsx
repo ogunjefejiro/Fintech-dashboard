@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
+import data from "../../data";
+import ActiveContext from "../../context/ActiveContext";
 
 const cards = [
   {
@@ -26,32 +28,35 @@ const cards = [
 ];
 
 const WalletCards = () => {
+  const { setActiveCard } = useContext(ActiveContext);
   return (
     <div className="text-[#001B21]">
       <div className="flex justify-between items-center mb-3">
-        <h2 className="font-bold">Wallet ({cards.length})</h2>
-        <Link href="#">
+        <h2 className="font-bold">Wallet ({data.active.length})</h2>
+        <Link href="/wallet">
           <a className="text-xs text-[#017189]">View all wallets</a>
         </Link>
       </div>
       <div className="flex gap-6 overflow-x-auto pb-2 lg:pb-0">
-        {cards.map(({ name, currency, img, amount, color }, i) => (
-          <div
-            key={i}
-            className="p-4 rounded-lg md:w-full  cursor-pointer"
-            style={{ backgroundColor: color }}
-          >
-            <div className="flex min-w-[200px] justify-between items-center mb-6">
-              <div className="text-sm">
-                <h3 className="">{name}</h3>
-                <p className="">{currency}</p>
+        {data.active.map(({ name, currency, img, amount, color, id }, i) => (
+          <Link href="/wallet" key={i}>
+            <a
+              className="p-4 rounded-lg md:w-full  cursor-pointer"
+              style={{ backgroundColor: color }}
+              onClick={() => setActiveCard(id)}
+            >
+              <div className="flex min-w-[200px] justify-between items-center mb-6">
+                <div className="text-sm">
+                  <h3 className="">{name}</h3>
+                  <p className="">{currency}</p>
+                </div>
+                <div>
+                  <img src={img} alt="" />
+                </div>
               </div>
-              <div>
-                <img src={img} alt="" />
-              </div>
-            </div>
-            <h2 className="text-md font-bold">{amount}</h2>
-          </div>
+              <h2 className="text-md font-bold">{amount}</h2>
+            </a>
+          </Link>
         ))}
       </div>
     </div>

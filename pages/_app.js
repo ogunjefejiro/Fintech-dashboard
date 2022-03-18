@@ -1,9 +1,12 @@
 import "../styles/globals.css";
+import { ActiveContextProvider } from "../context/ActiveContext";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Component {...pageProps} />
+      <ActiveContextProvider>
+        <Component {...pageProps} />
+      </ActiveContextProvider>
     </>
   );
 }

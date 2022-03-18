@@ -44,16 +44,20 @@ const AppBar = ({ page, menuOpen, setMenuOpen }) => {
           <div className="">
             <div className="relative text-[#333333] w-full">
               <input
-                type="email"
-                name="email"
+                type="search"
+                name="search"
                 className="py-2 text-xs border w-full border-[#E5E5E5] rounded-xl focus:border-primary pl-3 pr-8 focus:outline-none"
                 placeholder="Search..."
-                {...register("email", {
+                {...register("search", {
                   required: true,
                 })}
               />
               <span className="absolute inset-y-0 right-0 flex items-center pr-3">
-                <img src="/search.svg" alt="" />
+                <img
+                  src="/search.svg"
+                  alt=""
+                  className="btn btn-xs border-none hover:bg-transparent"
+                />
               </span>
             </div>
           </div>

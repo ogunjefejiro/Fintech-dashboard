@@ -9,13 +9,14 @@ const NavbarLayout = ({ page, setMenuOpen }) => {
       name: "dashboard",
       path: "/",
       title: "Dashboard",
-      icon: "/dashboard-icon.svg",
+      icon:
+        page == "dashboard" ? "/dashboard-icon.svg" : "/dashboard-white.svg",
     },
     {
       name: "wallet",
-      path: "/#",
+      path: "/wallet",
       title: "Wallet",
-      icon: "/wallet-icon.svg",
+      icon: page == "wallet" ? "/wallet-active.svg" : "/wallet-icon.svg",
     },
     {
       name: "cards",
@@ -67,8 +68,10 @@ const NavbarLayout = ({ page, setMenuOpen }) => {
           {navLinks.map(({ name, path, title, icon }, i) => (
             <Link key={i} href={path}>
               <a
-                className={`flex gap-5  items-center text-white rounded-md px-4 py-2 mb-1 w-full hover:bg-white hover:text-primary ${
-                  name == page ? "bg-white text-primary font-bold" : ""
+                className={`flex gap-5  items-center  rounded-md px-4 py-2 mb-1 w-full hover:bg-white hover:text-primary ${
+                  name == page
+                    ? "bg-white text-primary font-bold"
+                    : "text-white"
                 }`}
               >
                 <div>

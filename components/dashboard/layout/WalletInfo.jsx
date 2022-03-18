@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
+import ActiveContext from "../../../context/ActiveContext";
 
 const overview = [
   {
     name: "Wallet Balance",
-    amount: "$15,001.00",
+    amount: "$10,250.00",
     icon: "/wallet-card.svg",
     toggle: true,
   },
@@ -17,7 +18,7 @@ const overview = [
 ];
 
 const WalletInfo = () => {
-  const [show, setShow] = useState(true);
+  const { show, setShow } = useContext(ActiveContext);
   return (
     <div className="p-4 bg-secondary rounded-md ">
       {overview.map(({ name, amount, icon, toggle }, i) => (
