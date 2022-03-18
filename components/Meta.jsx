@@ -16,7 +16,7 @@ const Meta = ({ title, keywords, description }) => {
 Meta.defaultProps = {
   title: "GenioPay - Digital Wallet",
   keywords: "fintech, digital wallet",
-  description: "manage all our wallets from one place",
+  description: "manage all your wallets from one place",
 };
 
 export default Meta;

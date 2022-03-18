@@ -74,7 +74,7 @@ const AppBar = ({ page, menuOpen, setMenuOpen }) => {
             <div>
               <Link href="/">
                 <a>
-                  <img src="/avatar.png" alt="" />
+                  <img src="/fejiro.jpg" alt="" className="w-[26px]" />
                 </a>
               </Link>
             </div>
